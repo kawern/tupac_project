@@ -1,0 +1,602 @@
+@charset "utf-8";
+/*=============================================
+=            RESET            =
+=============================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  -moz-scrollbars: vertical;
+}
+img {
+  width: 100%;
+  height: auto;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/*=====  End of RESET  ======*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  color: #000;
+  text-align: center;
+}
+.modal-content :nth-last-of-type() {
+  background-color: green;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*=============================================
+=            PARAGRAPHS, HEADINGS, ETC        =
+=============================================*/
+p {
+  line-height: 1.5em;
+}
+p.center {
+  text-align: center;
+}
+i.small {
+  font-size: 12px;
+}
+h2 {
+  text-transform: uppercase;
+}
+h3 {
+  text-transform: uppercase;
+}
+article.bio:first-child {
+  margin-right: 30px;
+}
+article.film:first-child {
+  margin-right: 100px;
+}
+.center {
+  text-align: center;
+}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+/*=============================================
+=            FLEX     CLASSES       =
+=============================================*/
+
+[class*="flex"] {
+  padding: 0.5em 1%;
+}
+.flex1 {
+  flex: 1;
+}
+.flex2 {
+  flex: 2;
+}
+.flex3 {
+  flex: 3;
+}
+
+/*=====  End of FLEX  ======*/
+
+
+
+
+
+/*=============================================
+=            BODY        =
+=============================================*/
+body.index {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  background-attachment: fixed;
+  background-repeat: no-repeat; /*Billedet skal ikke gentage sig*/
+  background-size: cover;
+  color: #fff;
+}
+body.bio {
+  font-family: 'Montserrat', sans-serif;
+  background: url(images/bg-bio1.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat; /*Billedet skal ikke gentage sig*/
+  background-size: cover;
+  color: #fff;
+}
+body.disco {
+  font-family: 'Montserrat', sans-serif;
+  background: url(images/disco-bg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat; /*Billedet skal ikke gentage sig*/
+  background-size: cover;
+  color: #fff;
+}
+body.gallery {
+  font-family: 'Montserrat', sans-serif;
+  background: url(images/bg-gallery.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat; /*Billedet skal ikke gentage sig*/
+  background-size: cover;
+  color: #fff;
+}
+body.shop {
+  font-family: 'Montserrat', sans-serif;
+  background: url(images/bg-shop.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat; /*Billedet skal ikke gentage sig*/
+  background-size: cover;
+  color: #fff;
+}
+#wrapper {
+  max-width: 1280px;
+  margin: 0 auto 0 auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+/*=====  End of BODY  ======*/
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header { /*Header billedet på hver side*/
+  width: 100%;
+  height: auto;
+  padding-bottom: 100px;
+}
+
+/*=============================================
+=            NAVIGATION            =
+=============================================*/
+
+#navbar {
+  position: absolute; /* Set the navbar to fixed position */
+  width: 1280px; /* Full width */
+}
+#navbar ul {
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 16;
+  display: flex;
+  justify-content: space-between;
+  margin: 0% 9%;
+
+}
+#navbar ul li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px;
+}
+.menu-active {
+  border-bottom: solid 2px;
+}
+li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+a:hover {
+  color: #ccc;
+}
+
+/*=====  End of NAVIGATION  ======*/
+
+/*=============================================
+=            BIOGRAPHY PAGE            =
+=============================================*/
+/* PAGINATION */
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #5d5d5d;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #fff;
+  color: black;
+  border: 1px solid #fff;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    color: #000;
+}
+/* PAGINATION END */
+
+
+/*=============================================
+=            FILMOGRAPHY TABLE            =
+=============================================*/
+#filmography {
+  font-family: 'Montserrat', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#filmography td, #filmography th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#filmography th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #fff;
+  color: black;
+}
+/*=====  End of FILMOGRAPHY  ======*/
+
+/*=====  End of BIOGRAPHY PAGE  ======*/
+
+
+/*=============================================
+=            MAIN  + FLEX SECTIONS/ARTICLES   =
+=============================================*/
+
+
+
+/*=====  End of MAIN  ======*/
+
+
+main {
+  margin: 2% 5%;
+}
+
+section {
+  display: flex;
+}
+article {
+  display: block;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+article.index {
+  text-align: center;
+}
+article.center {
+  text-align: center;
+}
+
+
+/*=============================================
+=            DISCOGRAPHY            =
+=============================================*/
+
+section.disco {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+}
+.card {
+  border: 1px solid #d3d3d3;
+}
+
+.bg-img {
+  background-size: cover;
+  min-height: 180px;
+  background-position: center;
+}
+
+.content {
+  padding: 15px;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+section.album {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+}
+.album-img {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+.album-info {
+  grid-column-start: 8;
+  grid-column-end: 13;
+}
+.album-track {
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+.album-close {
+  grid-column-start: 13;
+  grid-column-end: 13;
+  align-self: end;
+  width: 5%;
+}
+pre {
+  align-items: center;
+}
+/*=============================================
+=            DISCOGRAPHY  TABLE            =
+=============================================*/
+#album {
+  font-family: 'Montserrat', sans-serif;
+  border-collapse: collapse;
+  max-width: 100%;
+  
+}
+
+#album td, #album th {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+#album th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  white-space:nowrap;
+  text-transform: uppercase;
+}
+/* #track .hidden { 
+  display: none; 
+} 
+*/
+#track {
+  font-family: 'Montserrat', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+#track td, #track th {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+#track th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  white-space:nowrap;
+  text-transform: uppercase;
+}
+#track th:last-child {
+  width: 10%;
+  text-align: center;
+}
+#track td:last-child {
+  width: 5%;
+  text-align: center;
+}
+#track th:first-child, #track td:first-child {
+  width: 5%;
+  text-align: center;
+}
+/*=====  End of DISCOGRAPHY  ======*/
+
+
+
+/*=============================================
+=            SHOP            =
+=============================================*/
+section.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+  overflow: hidden;
+}
+.albums {
+  background-color: #ffffff;
+  color: black;
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+}
+.apparel {
+  background-color: #ffffff;
+  color: black;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.price {
+  color: black;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.albums button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: #fff;
+  background-color: green;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.albums button:hover {
+ opacity: 0.5;
+}
+
+/*=====  End of SHOP  ======*/
+
+
+
+/*=============================================
+=            VIDEO CONTAINER            =
+=============================================*/
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* - for 16:9 video*/
+  /*padding-bottom: 75%;*/ /* - for 4:3 video*/
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/*=====  End of VIDEO CONTAINER  ======*/
+
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+
+footer {
+  padding-top: 100px;
+  text-align: center;
+}
+
+/*=====  End of FOOTER  ======*/
+
+
+
+/*=============================================
+=            MEDIA QUERIES            =
+=============================================*/
+
+@media screen and (max-width:480px) {
+  #navbar ul, #navbar li:last-child, #navbar li:nth-child(5) {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .pagination {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .reviews {
+    width: 100%;
+  }
+  section, article {
+    flex-direction: column;
+    width: 100%;
+  }
+  #navbar {
+    position: relative !important;
+    width: 100%;
+  }
+  section.disco, section.album, section.gallery, section.shop {
+    display: flex;
+flex-direction: column;
+  }
+}
+@media screen and (max-width:768px) {
+  #navbar ul, #navbar li:last-child, #navbar li:nth-child(5) {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .pagination {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  section, article {
+    flex-direction: column;
+    width: 100%;
+  }
+  #navbar {
+    position: relative !important;
+    width: 100%;
+  }
+  section.disco, section.album, section.gallery, section.shop  {
+    display: flex;
+flex-direction: column;
+  }
+}
+@media screen and (max-width:1024px) {
+  #navbar ul, #navbar li:last-child, #navbar li:nth-child(5) {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .pagination {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  #navbar {
+    position: relative !important;
+    width: 100%;
+  }
+  section.disco, section.album, section.gallery, section.shop  {
+    display: flex;
+flex-direction: column;
+  }
+}
+/*=====  End of MEDIA QUERIES  ======*/
+
+
+

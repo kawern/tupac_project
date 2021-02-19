@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel='icon' href='favicon.ico' type='image/x-icon'/>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="lightbox.css" rel="stylesheet" type="text/css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tupac - Gallery</title>
+</head>
+
+<body class="gallery">
+  <!--Her starter indhold-->
+  <div id="wrapper">
+    <header>
+      <div id="navbar">
+        <!--Navigation-->
+        <ul>
+          <li> <a href="index.html">HOME</a></li>
+          <li><a href="biography/">BIOGRAPHY</a></li>
+          <li><a href="discography/">DISCOGRAPHY</a></li>
+          <li><a class="menu-active" href="gallery.html">GALLERY</a></li>
+          <li><a href="shop/">SHOP</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div class="column">
+          <img src="images/gallery/1-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/2-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/3-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/4-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="images/gallery/5-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/6-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/7-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/8-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="images/gallery/9-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/10-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/11-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/gallery/12-600x400.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+        </div>
+      </div>
+      
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 12</div>
+            <img src="images/gallery/1-600x400.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 12</div>
+            <img src="images/gallery/2-600x400.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 12</div>
+            <img src="images/gallery/3-600x400.jpg" style="width:100%">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 12</div>
+            <img src="images/gallery/4-600x400.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">5 / 12</div>
+            <img src="images/gallery/5-600x400.jpg" style="width:100%">
+            test
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">6 / 12</div>
+            <img src="images/gallery/6-600x400.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">7 / 12</div>
+            <img src="images/gallery/7-600x400.jpg" style="width:100%">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">8 / 12</div>
+            <img src="images/gallery/8-600x400.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">9 / 12</div>
+            <img src="images/gallery/9-600x400.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">10 / 12</div>
+            <img src="images/gallery/10-600x400.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">11 / 12</div>
+            <img src="images/gallery/11-600x400.jpg" style="width:100%">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">12 / 12</div>
+            <img src="images/gallery/12-600x400.jpg" style="width:100%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+      
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+      
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+    </main>
+    <footer>
+      <p>© 2020 | Kasper Lisberg</p>
+    </footer>
+  </div>
+</body>
+
+</html>
